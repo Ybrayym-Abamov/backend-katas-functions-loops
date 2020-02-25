@@ -43,10 +43,10 @@ def factorial(x):
 def fibonacci(n):
     """Compute the nth term of fibonacci sequence"""
     a, b = 0, 1
-    for _ in range(1, n):
+    for _ in range(1, n-1):
         a, b = b, add(a, b)
     return b
-
+print(fibonacci(8))
 
 # def main():
 #     option = sys.argv[1]
