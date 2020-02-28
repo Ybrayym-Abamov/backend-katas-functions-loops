@@ -4,7 +4,7 @@
 __author__ = "Ybrayym Abamov"
 
 
-import sys
+# import sys
 
 
 def add(x, y):
@@ -16,9 +16,9 @@ def multiply(x, y):
     """Multiply x with y. Handles negative values of x or y."""
     counter = 0
     if y < 0:
-        for num in range(abs(y)):
+        for _ in range(abs(y)):
             counter = add(-x, counter)
-    for num in range(y):
+    for _ in range(y):
         counter = add(x, counter)
     return counter
 
@@ -37,16 +37,17 @@ def factorial(x):
         return 1
     else:
         for num in range(1, x):
-           x = multiply(x, num)
+            x = multiply(x, num)
     return x
+
 
 def fibonacci(n):
     """Compute the nth term of fibonacci sequence"""
     a, b = 0, 1
-    for _ in range(1, n-1):
+    for _ in range(1, n):
         a, b = b, add(a, b)
     return b
-print(fibonacci(8))
+
 
 # def main():
 #     option = sys.argv[1]
